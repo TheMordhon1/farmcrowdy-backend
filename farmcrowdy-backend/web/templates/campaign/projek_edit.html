@@ -1,0 +1,46 @@
+{{ define "content" }}
+
+<h2 class="mb-4">Edit Projek</h2>
+
+{{ if .Error }}
+<div class="alert alert-danger">
+    {{ .Error }}
+</div>
+{{ end }}
+
+<div class="card mb-4">
+    <div class="card-body">
+        <form action="/projek/update/{{ .ID }}" method="POST">
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" name="name" placeholder="Enter name" required class="form-control" value="{{ .Name }}">
+            </div>
+
+            <div class="form-group">
+                <label for="short_description">Deskripsi Singkat</label>
+                <input type="text" name="short_description" placeholder="Deskripsi Singkat" required class="form-control" value="{{ .ShortDescription }}">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Deskripsi Projek</label>
+                <textarea name="description" cols="30" rows="10" placeholder="Deskripsi Projek" required class="form-control">{{ .Description }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="goal_amount">Total Biaya Projek</label>
+                <input type="number" name="goal_amount" placeholder="Enter goal amount" required class="form-control" value="{{ .GoalAmount }}">
+            </div>
+
+            <div class="form-group">
+                <label for="perks" class="text-capitalize">yang ditawarkan kepada funder </label>
+                <input type="text" name="perks" placeholder="* Jika lebih dari satu pisahkan dengan tanda koma (,)" required class="form-control" value="{{ .Perks }}">
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{ end }}
