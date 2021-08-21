@@ -69,7 +69,10 @@ func (h *campaignHandler) Create(c *gin.Context) {
 	createCampaignInput := campaign.CreateCampaignInput{}
 	createCampaignInput.Name = input.Name
 	createCampaignInput.ShortDescription = input.ShortDescription
-	createCampaignInput.Description = input.Description
+	createCampaignInput.DescriptionKomoditas = input.DescriptionKomoditas
+	createCampaignInput.DescriptionProspek = input.DescriptionProspek
+	createCampaignInput.DescriptionRisiko = input.DescriptionRisiko
+	createCampaignInput.DescriptionKelompokTani = input.DescriptionKelompokTani
 	createCampaignInput.GoalAmount = input.GoalAmount
 	createCampaignInput.Perks = input.Perks
 	createCampaignInput.User = user
@@ -151,7 +154,10 @@ func (h *campaignHandler) Edit(c *gin.Context) {
 	input.ID = existingCampaign.ID
 	input.Name = existingCampaign.Name
 	input.ShortDescription = existingCampaign.ShortDescription
-	input.Description = existingCampaign.Description
+	input.DescriptionKomoditas = existingCampaign.DescriptionKomoditas
+	input.DescriptionProspek = existingCampaign.DescriptionProspek
+	input.DescriptionRisiko = existingCampaign.DescriptionRisiko
+	input.DescriptionKelompokTani = existingCampaign.DescriptionKelompokTani
 	input.GoalAmount = existingCampaign.GoalAmount
 	input.Perks = existingCampaign.Perks
 
@@ -189,7 +195,10 @@ func (h *campaignHandler) Update(c *gin.Context) {
 	updateInput := campaign.CreateCampaignInput{}
 	updateInput.Name = input.Name
 	updateInput.ShortDescription = input.ShortDescription
-	updateInput.Description = input.Description
+	updateInput.DescriptionKomoditas = input.DescriptionKomoditas
+	updateInput.DescriptionProspek = input.DescriptionProspek
+	updateInput.DescriptionRisiko = input.DescriptionRisiko
+	updateInput.DescriptionKelompokTani = input.DescriptionKelompokTani
 	updateInput.GoalAmount = input.GoalAmount
 	updateInput.Perks = input.Perks
 	updateInput.User = userCampaign

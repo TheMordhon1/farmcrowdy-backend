@@ -8,6 +8,7 @@ type CampaignTransactionFormatter struct {
 	ID        int       `json:"id"`
 	Name      string    `json:"name"`
 	Amount    int       `json:"amount"`
+	Status    string    `json:"status"`
 	CreatedAt time.Time `json:"created_at"`
 }
 
@@ -16,6 +17,7 @@ func FormatCampaignTransaction(transaction Transaction) CampaignTransactionForma
 	formatter.ID = transaction.ID
 	formatter.Name = transaction.User.Name
 	formatter.Amount = transaction.Amount
+	formatter.Status = transaction.Status
 	formatter.CreatedAt = transaction.CreatedAt
 	return formatter
 }
