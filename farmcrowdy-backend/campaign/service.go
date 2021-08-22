@@ -86,12 +86,12 @@ func (s *service) UpdateCampaign(inputID GetCampaignDetailInput, inputData Creat
 
 	campaign.Name = inputData.Name
 	campaign.ShortDescription = inputData.ShortDescription
+	campaign.Perks = inputData.Perks
+	campaign.GoalAmount = inputData.GoalAmount
 	campaign.DescriptionKomoditas = inputData.DescriptionKomoditas
 	campaign.DescriptionProspek = inputData.DescriptionProspek
 	campaign.DescriptionRisiko = inputData.DescriptionRisiko
 	campaign.DescriptionKelompokTani = inputData.DescriptionKelompokTani
-	campaign.Perks = inputData.Perks
-	campaign.GoalAmount = inputData.GoalAmount
 
 	updatedCampaign, err := s.repository.Update(campaign)
 	if err != nil {

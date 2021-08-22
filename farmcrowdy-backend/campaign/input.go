@@ -9,10 +9,10 @@ type GetCampaignDetailInput struct {
 type CreateCampaignInput struct {
 	Name                    string `json:"name" binding:"required"`
 	ShortDescription        string `json:"short_description" binding:"required"`
-	DescriptionKomoditas    string `json:"description_komoditas"`
-	DescriptionProspek      string `json:"description_prospek"`
-	DescriptionRisiko       string `json:"description_risiko"`
-	DescriptionKelompokTani string `json:"description_kelompok_tani"`
+	DescriptionKomoditas    string `json:"description_komoditas" binding:"required"`
+	DescriptionProspek      string `json:"description_prospek" binding:"required"`
+	DescriptionRisiko       string `json:"description_risiko" binding:"required"`
+	DescriptionKelompokTani string `json:"description_kelompok_tani" binding:"required"`
 	GoalAmount              int    `json:"goal_amount" binding:"required"`
 	Perks                   string `json:"perks" binding:"required"`
 	User                    user.User
@@ -27,10 +27,10 @@ type CreateCampaignImageInput struct {
 type FormCreateCampaignInput struct {
 	Name                    string `form:"name" binding:"required"`
 	ShortDescription        string `form:"short_description" binding:"required"`
-	DescriptionKomoditas    string `json:"description_komoditas"`
-	DescriptionProspek      string `json:"description_prospek"`
-	DescriptionRisiko       string `json:"description_risiko"`
-	DescriptionKelompokTani string `json:"description_kelompok_tani"`
+	DescriptionKomoditas    string `form:"description_komoditas" binding:"required"`
+	DescriptionProspek      string `form:"description_prospek" binding:"required"`
+	DescriptionRisiko       string `form:"description_risiko" binding:"required"`
+	DescriptionKelompokTani string `form:"description_kelompok_tani" binding:"required"`
 	GoalAmount              int    `form:"goal_amount" binding:"required"`
 	Perks                   string `form:"perks" binding:"required"`
 	UserID                  int    `form:"user_id" binding:"required"`
@@ -42,10 +42,10 @@ type FormUpdateCampaignInput struct {
 	ID                      int
 	Name                    string `form:"name" binding:"required"`
 	ShortDescription        string `form:"short_description" binding:"required"`
-	DescriptionKomoditas    string `json:"description_komoditas"`
-	DescriptionProspek      string `json:"description_prospek"`
-	DescriptionRisiko       string `json:"description_risiko"`
-	DescriptionKelompokTani string `json:"description_kelompok_tani"`
+	DescriptionKomoditas    string `form:"description_komoditas" binding:"required"`
+	DescriptionProspek      string `form:"description_prospek" binding:"required"`
+	DescriptionRisiko       string `form:"description_risiko" binding:"required"`
+	DescriptionKelompokTani string `form:"description_kelompok_tani" binding:"required"`
 	GoalAmount              int    `form:"goal_amount" binding:"required"`
 	Perks                   string `form:"perks" binding:"required"`
 	Error                   error
