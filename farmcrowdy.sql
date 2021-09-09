@@ -133,7 +133,7 @@ CREATE TABLE `users` (
   `occupation` varchar(40) NOT NULL,
   `email` varchar(30) NOT NULL,
   `password_hash` char(60) NOT NULL,
-  `avatar_file_name` varchar(40) NOT NULL,
+  `avatar_file_name` varchar(64) NOT NULL,
   `role` varchar(15) NOT NULL,
   `created_at` datetime(6) NOT NULL,
   `updated_at` datetime(6) NOT NULL
