@@ -71,6 +71,7 @@ func (h *userHandler) Edit(c *gin.Context) {
 	input.Name = registeredUser.Name
 	input.Email = registeredUser.Email
 	input.Occupation = registeredUser.Occupation
+	input.Role = registeredUser.Role
 
 	c.HTML(http.StatusOK, "user_edit.html", input)
 }

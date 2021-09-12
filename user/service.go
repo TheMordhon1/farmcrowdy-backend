@@ -36,7 +36,7 @@ func (s *service) RegisterUser(input RegisterUserInput) (User, error) {
 	}
 
 	user.PasswordHash = string(passwordHash)
-	user.Role = "user"
+	
 
 	newUser, err := s.repository.Save(user)
 	if err != nil {
@@ -56,7 +56,7 @@ func (s *service) Login(input LoginInput) (User, error) {
 	}
 
 	if user.ID == 0 {
-		return user, errors.New("No user found on that email")
+		return user, errors.New("no user found on that email")
 	}
 
 	err = bcrypt.CompareHashAndPassword([]byte(user.PasswordHash), []byte(password))
@@ -105,7 +105,7 @@ func (s *service) GetUserByID(ID int) (User, error) {
 	}
 
 	if user.ID == 0 {
-		return user, errors.New("No user found on with that ID")
+		return user, errors.New("no user found on with that ID")
 	}
 
 	return user, nil
@@ -129,6 +129,7 @@ func (s *service) UpdateUser(input FormUpdateUserInput) (User, error) {
 	user.Name = input.Name
 	user.Email = input.Email
 	user.Occupation = input.Occupation
+	user.Role = input.Role
 
 	updatedUser, err := s.repository.Update(user)
 	if err != nil {

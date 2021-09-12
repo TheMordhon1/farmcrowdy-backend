@@ -10,10 +10,10 @@
             <thead class="thead-light">
                 <tr>
                     <th></th>
+                    <th>Pembuat Projek</th>
                     <th>Nama</th>
                     <th>Deskripsi Singkat</th>
                     <th>Total Biaya Projek</th>
-                    <th>Pembuat Projek</th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -27,10 +27,10 @@
                             <img width="100" src="/{{ (index .CampaignImages 0).FileName }}" class="img-fluid img-thumbnail">
                         {{ end }}
                     </td>
+                    <td>{{ .User.Name }}</td>
                     <td>{{ .Name }}</td>
                     <td>{{ .ShortDescription }}</td>
                     <td>{{ .GoalAmountFormatIDR }}</td>
-                    <td>{{ .User.Name }}</td>
                     <td><a href="/projek/show/{{ .ID }}"><i class="fa fa-search"></i><a></td>
                     <td><a href="/projek/edit/{{ .ID }}"><i class="fa fa-edit"></i><a></td>
                     <td><a href="/projek/image/{{ .ID }}"><i class="fa fa-camera"></i><a></td>

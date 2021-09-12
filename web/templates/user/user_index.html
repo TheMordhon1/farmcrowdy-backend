@@ -13,6 +13,7 @@
                     <th>Email</th>
                     <th>Pekerjaan</th>
                     <th>Tanggal Dibuat</th>
+                    <th>Role</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -25,6 +26,7 @@
                     <td>{{ .Email }}</td>
                     <td>{{ .Occupation }}</td>
                     <td>{{ .CreatedAt }}</td>
+                    <td>{{ .Role }}</td>
                     <td><a href="/users/edit/{{ .ID }}"><i class="fa fa-edit"></i></a></td>
                     <td><a href="/users/avatar/{{ .ID }}"><i class="fa fa-camera"></i></a></td>
                 </tr>

@@ -8,7 +8,9 @@
             <thead class="thead-light">
                 <tr>
                     <th>Nama Funder</th>
+                    <th>Email</th>
                     <th>Nama Projek</th>
+                    <th>Waktu</th>
                     <th>Biaya</th>
                     <th>Status</th>
                 </tr>
@@ -17,9 +19,15 @@
                 {{ range .transactions }}
                 <tr>
                     <td class="text-capitalize">{{ .User.Name }}</td>
+                    <td >{{ .User.Email }}</td>
                     <td>{{ .Campaign.Name }}</td>
-                    <td>{{ .AmountFormatIDR }}</td>
-                    <td class="text-capitalize" >{{ .Status }}</td>
+                    <td>{{ .CreatedAt }}</td>
+                    <td style="color: rgb(15, 220, 83);">{{ .AmountFormatIDR }}</td>
+                    <td class="text-capitalize status paid"  ><span style="display:block; width: 100px;
+                        border-radius: 10px;
+                        background: rgb(15, 220, 83);
+                        color: #fff; text-align: center; line-height: 30px;">{{ .Status }}</span>
+                    </td>
                 </tr>
                 {{ end }}
             </tbody>

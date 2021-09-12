@@ -26,12 +26,20 @@
             </div>
 
             <div class="form-group">
+                <label for="role">Role</label>
+                <select name="role" placeholder="Enter Role" required class="form-control" value="{{ .Role }}">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" name="password" placeholder="Enter password" required class="form-control">
             </div>
 
             <div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
             </div>
         </form>
     </div>
