@@ -9,6 +9,7 @@ type CampaignTransactionFormatter struct {
 	Name      string    `json:"name"`
 	Amount    int       `json:"amount"`
 	Status    string    `json:"status"`
+	PaymentURL    string    `json:"payment_url"`
 	CreatedAt time.Time `json:"created_at"`
 }
 
@@ -18,6 +19,7 @@ func FormatCampaignTransaction(transaction Transaction) CampaignTransactionForma
 	formatter.Name = transaction.User.Name
 	formatter.Amount = transaction.Amount
 	formatter.Status = transaction.Status
+	formatter.PaymentURL = transaction.PaymentURL
 	formatter.CreatedAt = transaction.CreatedAt
 	return formatter
 }
@@ -42,6 +44,7 @@ type UserTransactionFormatter struct {
 	Name      string            `json:"name"`
 	Amount    int               `json:"amount"`
 	Status    string            `json:"status"`
+	PaymentURL    string            `json:"payment_url"`
 	CreatedAt time.Time         `json:"created_at"`
 	Campaign  CampaignFormatter `json:"campaign"`
 }
@@ -57,6 +60,7 @@ func FormatUserTransaction(transaction Transaction) UserTransactionFormatter {
 	formatter.Name = transaction.User.Name
 	formatter.Amount = transaction.Amount
 	formatter.Status = transaction.Status
+	formatter.PaymentURL = transaction.PaymentURL
 	formatter.CreatedAt = transaction.CreatedAt
 
 	campaignFormatter := CampaignFormatter{}
