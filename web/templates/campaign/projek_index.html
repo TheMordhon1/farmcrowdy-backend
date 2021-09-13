@@ -10,10 +10,11 @@
             <thead class="thead-light">
                 <tr>
                     <th></th>
-                    <th>Pembuat Projek</th>
+                    <th>Pembuat</th>
                     <th>Nama</th>
                     <th>Deskripsi Singkat</th>
-                    <th>Total Biaya Projek</th>
+                    <th>Total Biaya</th>
+                    <th>Terkumpul</th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -24,14 +25,17 @@
                 <tr>
                     <td>
                         {{ if .CampaignImages }}
-                            <img width="100" src="/{{ (index .CampaignImages 0).FileName }}" class="img-fluid img-thumbnail">
+                            <a class="venobox" href="/{{ (index .CampaignImages 0).FileName }}" >
+                            <img width="200" src="/{{ (index .CampaignImages 0).FileName }}" class="img-fluid img-thumbnail">
+                            </a>
                         {{ end }}
                     </td>
                     <td>{{ .User.Name }}</td>
                     <td>{{ .Name }}</td>
                     <td>{{ .ShortDescription }}</td>
                     <td>{{ .GoalAmountFormatIDR }}</td>
-                    <td><a href="/projek/show/{{ .ID }}"><i class="fa fa-search"></i><a></td>
+                    <td>{{ .CurrentAmountFormatIDR }}</td>
+                    <td><a href="/projek/show/{{ .ID }}"><i class="fa fa-eye"></i><a></td>
                     <td><a href="/projek/edit/{{ .ID }}"><i class="fa fa-edit"></i><a></td>
                     <td><a href="/projek/image/{{ .ID }}"><i class="fa fa-camera"></i><a></td>
                 </tr>
