@@ -35,9 +35,9 @@
                     <td>{{ .ShortDescription }}</td>
                     <td>{{ .GoalAmountFormatIDR }}</td>
                     <td>{{ .CurrentAmountFormatIDR }}</td>
-                    <td><a href="/projek/show/{{ .ID }}"><i class="fa fa-eye"></i><a></td>
-                    <td><a href="/projek/edit/{{ .ID }}"><i class="fa fa-edit"></i><a></td>
-                    <td><a href="/projek/image/{{ .ID }}"><i class="fa fa-camera"></i><a></td>
+                    <td><a href="/projek/show/{{ .ID }}" title="Lihat Proyek"><i class="fa fa-eye"></i><a></td>
+                    <td><a href="/projek/edit/{{ .ID }}" title="Edit"><i class="fa fa-edit"></i><a></td>
+                    <td><a href="/projek/image/{{ .ID }}" title="Tambah Foto"><i class="fa fa-camera"></i><a></td>
                 </tr>
                 {{ end }}
             </tbody>

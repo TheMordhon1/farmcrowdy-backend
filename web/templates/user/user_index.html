@@ -18,6 +18,7 @@
           <th>Role</th>
           <th></th>
           <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -37,11 +38,14 @@
           <td>{{ .Occupation }}</td>
           <td>{{ .CreatedAt }}</td>
           <td>{{ .Role }}</td>
-          <td>
-            <a href="/users/edit/{{ .ID }}"><i class="fa fa-edit"></i></a>
+          <td >
+            <a href="mailto:{{ .Email }}" title="Kirim Email"><i class="fa fa-envelope"></i></a>
           </td>
-          <td>
-            <a href="/users/avatar/{{ .ID }}"><i class="fa fa-camera"></i></a>
+          <td >
+            <a href="/users/edit/{{ .ID }}" title="Edit"><i class="fa fa-edit"></i></a>
+          </td>
+          <td >
+            <a href="/users/avatar/{{ .ID }}" title="Ubah Foto"><i class="fa fa-camera"></i></a>
           </td>
         </tr>
         {{ end }}
