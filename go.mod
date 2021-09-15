@@ -9,18 +9,23 @@ require (
 	github.com/gin-contrib/multitemplate v0.0.0-20200916052041-666a7309d230
 	github.com/gin-contrib/sessions v0.0.3
 	github.com/gin-gonic/gin v1.6.3
-	github.com/go-playground/validator v9.31.0+incompatible
+	github.com/go-playground/validator v9.31.0+incompatible // indirect
 	github.com/go-playground/validator/v10 v10.4.0
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/gosimple/slug v1.9.0
 	github.com/json-iterator/go v1.1.10 // indirect
+	github.com/kr/fs v0.1.0 // indirect
+	github.com/kr/pretty v0.3.0 // indirect
 	github.com/leekchan/accounting v1.0.0
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/rogpeppe/go-internal v1.8.0 // indirect
+	github.com/tools/godep v0.0.0-20180126220526-ce0bfadeb516 // indirect
 	github.com/ugorji/go v1.1.9 // indirect
 	github.com/veritrans/go-midtrans v0.0.0-20200831092805-5bfccc26bd1f
 	golang.org/x/crypto v0.0.0-20200820211705-5c72a883971a
-	golang.org/x/sys v0.0.0-20200926100807-9d91bd62050c // indirect
+	golang.org/x/sys v0.0.0-20210910150752-751e447fb3d0 // indirect
+	golang.org/x/tools v0.1.5 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 	gorm.io/driver/mysql v1.0.1
