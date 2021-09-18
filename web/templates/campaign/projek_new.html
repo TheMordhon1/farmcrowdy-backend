@@ -32,7 +32,7 @@
             </div>
 
             <div class="form-group">
-                <label for="short_description text-capitalize">Deskripsi Singkat</label>
+                <label for="short_description" class="text-capitalize">Deskripsi Singkat</label>
                 <input type="text" name="short_description" placeholder="Desktipsi singkat projek " required class="form-control" value="{{ .ShortDescription }}">
             </div>
 
@@ -57,12 +57,17 @@
             </div>
 
             <div class="form-group">
-                <label for="goal_amount text-capitalize">Total dana yang dibutuhkan</label>
+                <label for="goal_amount" class="text-capitalize">Total dana yang dibutuhkan</label>
                 <input type="number" name="goal_amount" placeholder="Masukan total dana yang dibutuhkan" required class="form-control" value="{{ .GoalAmount }}">
             </div>
 
             <div class="form-group">
-                <label for="perks text-capitalize">Yang ditawarkan kepada funder</label>
+                <label for="min_pembayaran" class="text-capitalize">Total dana yang dibutuhkan</label>
+                <input type="number" name="min_pembayaran" placeholder="Masukan total dana yang dibutuhkan" required class="form-control" value="{{ .MinPembayaran }}">
+            </div>
+
+            <div class="form-group">
+                <label for="perks" class="text-capitalize">Yang ditawarkan kepada funder</label>
                 <input type="text" name="perks" placeholder="*Jika lebih dari satu pisahkan dengan tanda koma (,)" required class="form-control" value="{{ .Perks }}">
             </div>
 

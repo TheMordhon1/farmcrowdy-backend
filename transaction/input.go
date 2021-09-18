@@ -1,6 +1,6 @@
 package transaction
 
-import "farmcrowdy/user"
+import "farmcrowdy_new/user"
 
 type GetCampaignTransactionsInput struct {
 	ID   int `uri:"id" binding:"required"`

@@ -1,7 +1,7 @@
 package campaign
 
 import (
-	"farmcrowdy/user"
+	"farmcrowdy_new/user"
 	"time"
 
 	"github.com/leekchan/accounting"
@@ -19,6 +19,7 @@ type Campaign struct {
 	Perks                   string
 	BackerCount             int
 	GoalAmount              int
+	MinPembayaran              int
 	CurrentAmount           int
 	Slug                    string
 	CreatedAt               time.Time
@@ -52,6 +53,11 @@ func (c Campaign) GoalAmountFormatIDR() string {
 func (c Campaign) CurrentAmountFormatIDR() string {
 	ac := accounting.Accounting{Symbol: "Rp", Precision: 0, Thousand: ".", Decimal: ","}
 	return ac.FormatMoney(c.CurrentAmount)
+}
+
+func (c Campaign) MinPembayaranFormatIDR() string {
+	ac := accounting.Accounting{Symbol: "Rp", Precision: 0, Thousand: ".", Decimal: ","}
+	return ac.FormatMoney(c.MinPembayaran)
 }
 
 type CampaignImage struct {

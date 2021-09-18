@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"farmcrowdy/helper"
-	"farmcrowdy/transaction"
-	"farmcrowdy/user"
+	"farmcrowdy_new/helper"
+	"farmcrowdy_new/transaction"
+	"farmcrowdy_new/user"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

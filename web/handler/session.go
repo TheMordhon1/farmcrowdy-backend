@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"farmcrowdy/user"
+	"farmcrowdy_new/user"
 	"net/http"
 
 	"github.com/gin-contrib/sessions"

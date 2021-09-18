@@ -1,6 +1,6 @@
 package campaign
 
-import "farmcrowdy/user"
+import "farmcrowdy_new/user"
 
 type GetCampaignDetailInput struct {
 	ID int `uri:"id" binding:"required"`
@@ -14,6 +14,7 @@ type CreateCampaignInput struct {
 	DescriptionRisiko       string `json:"description_risiko" binding:"required"`
 	DescriptionKelompokTani string `json:"description_kelompok_tani" binding:"required"`
 	GoalAmount              int    `json:"goal_amount" binding:"required"`
+	MinPembayaran              int    `json:"min_pembayaran" binding:"required"`
 	Perks                   string `json:"perks" binding:"required"`
 	User                    user.User
 }
@@ -32,6 +33,7 @@ type FormCreateCampaignInput struct {
 	DescriptionRisiko       string `form:"description_risiko" binding:"required"`
 	DescriptionKelompokTani string `form:"description_kelompok_tani" binding:"required"`
 	GoalAmount              int    `form:"goal_amount" binding:"required"`
+	MinPembayaran              int    `form:"min_pembayaran" binding:"required"`
 	Perks                   string `form:"perks" binding:"required"`
 	UserID                  int    `form:"user_id" binding:"required"`
 	Users                   []user.User
@@ -47,6 +49,7 @@ type FormUpdateCampaignInput struct {
 	DescriptionRisiko       string `form:"description_risiko" binding:"required"`
 	DescriptionKelompokTani string `form:"description_kelompok_tani" binding:"required"`
 	GoalAmount              int    `form:"goal_amount" binding:"required"`
+	MinPembayaran              int    `form:"min_pembayaran" binding:"required"`
 	Perks                   string `form:"perks" binding:"required"`
 	Error                   error
 	User                    user.User

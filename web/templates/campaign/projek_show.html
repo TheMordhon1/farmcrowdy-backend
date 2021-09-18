@@ -51,6 +51,11 @@
             </div>
 
             <div class="form-group">
+                <label for="min_pembayaran">Minimal Pembayaran</label>
+                <input type="text" name="min_pembayaran" placeholder="Enter Minimal Pembayaran" disabled class="form-control" value="{{ .MinPembayaranFormatIDR }}">
+            </div>
+
+            <div class="form-group">
                 <label for="perks">Yang Ditawarkan Pada Funder</label>
                 <input type="text" name="perks" placeholder="Enter perks (comma separated)" disabled class="form-control" value="{{ .Perks }}">
             </div>

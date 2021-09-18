@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"farmcrowdy/auth"
-	"farmcrowdy/helper"
-	"farmcrowdy/user"
+	"farmcrowdy_new/auth"
+	"farmcrowdy_new/helper"
+	"farmcrowdy_new/user"
 	"fmt"
 	"net/http"
 

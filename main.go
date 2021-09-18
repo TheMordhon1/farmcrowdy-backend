@@ -1,19 +1,19 @@
 package main
 
 import (
-	"farmcrowdy/auth"
-	"farmcrowdy/campaign"
-	"farmcrowdy/handler"
-	"farmcrowdy/helper"
-	"farmcrowdy/payment"
-	"farmcrowdy/transaction"
-	"farmcrowdy/user"
+	"farmcrowdy_new/auth"
+	"farmcrowdy_new/campaign"
+	"farmcrowdy_new/handler"
+	"farmcrowdy_new/helper"
+	"farmcrowdy_new/payment"
+	"farmcrowdy_new/transaction"
+	"farmcrowdy_new/user"
 	"log"
 	"net/http"
 	"path/filepath"
 	"strings"
 
-	webHandler "farmcrowdy/web/handler"
+	webHandler "farmcrowdy_new/web/handler"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-contrib/cors"
@@ -26,7 +26,7 @@ import (
 )
 
 func main() {
-	dsn := "root:@tcp(127.0.0.1:3306)/farmcrowdy?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:@tcp(127.0.0.1:3306)/farmcrowdy_new?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
@@ -62,7 +62,7 @@ func main() {
 	}))
 
 	cookieStore := cookie.NewStore([]byte(auth.SECRET_KEY))
-	router.Use(sessions.Sessions("farmcrowdy", cookieStore))
+	router.Use(sessions.Sessions("farmcrowdy_new", cookieStore))
 
 	router.HTMLRender = loadTemplates("./web/templates")
 

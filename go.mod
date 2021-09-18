@@ -1,4 +1,4 @@
-module farmcrowdy
+module farmcrowdy_new
 
 go 1.13
 

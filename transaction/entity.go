@@ -1,8 +1,8 @@
 package transaction
 
 import (
-	"farmcrowdy/campaign"
-	"farmcrowdy/user"
+	"farmcrowdy_new/campaign"
+	"farmcrowdy_new/user"
 	"time"
 
 	"github.com/leekchan/accounting"

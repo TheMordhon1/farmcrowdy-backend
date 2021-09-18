@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"farmcrowdy/user"
+	"farmcrowdy_new/user"
 	"fmt"
 	"net/http"
 	"strconv"

@@ -12,6 +12,7 @@ type CampaignFormatter struct {
 	ShortDescription string    `json:"short_description"`
 	ImageURL         string    `json:"image_url"`
 	GoalAmount       int       `json:"goal_amount"`
+	MinPembayaran       int       `json:"min_pembayaran"`
 	CurrentAmount    int       `json:"current_amount"`
 	CreatedAt        time.Time `json:"created_at"`
 	UpdatedAt        time.Time `json:"updated_at"`
@@ -25,6 +26,7 @@ func FormatCampaign(campaign Campaign) CampaignFormatter {
 	campaignFormatter.Name = campaign.Name
 	campaignFormatter.ShortDescription = campaign.ShortDescription
 	campaignFormatter.GoalAmount = campaign.GoalAmount
+	campaignFormatter.MinPembayaran = campaign.MinPembayaran
 	campaignFormatter.CurrentAmount = campaign.CurrentAmount
 	campaignFormatter.CreatedAt = campaign.CreatedAt
 	campaignFormatter.UpdatedAt = campaign.UpdatedAt
@@ -59,6 +61,7 @@ type CampaignDetailFormatter struct {
 	DescriptionKelompokTani string                   `json:"description_kelompok_tani"`
 	ImageURL                string                   `json:"image_url"`
 	GoalAmount              int                      `json:"goal_amount"`
+	MinPembayaran              int                      `json:"min_pembayaran"`
 	CurrentAmount           int                      `json:"current_amount"`
 	BackerCount             int                      `json:"backer_count"`
 	UserID                  int                      `json:"user_id"`
@@ -89,6 +92,7 @@ func FormatCampaignDetail(campaign Campaign) CampaignDetailFormatter {
 	campaignDetailFormatter.DescriptionRisiko = campaign.DescriptionRisiko
 	campaignDetailFormatter.DescriptionKelompokTani = campaign.DescriptionKelompokTani
 	campaignDetailFormatter.GoalAmount = campaign.GoalAmount
+	campaignDetailFormatter.MinPembayaran = campaign.MinPembayaran
 	campaignDetailFormatter.CurrentAmount = campaign.CurrentAmount
 	campaignDetailFormatter.BackerCount = campaign.BackerCount
 	campaignDetailFormatter.UserID = campaign.UserID

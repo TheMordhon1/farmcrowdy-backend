@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"farmcrowdy/campaign"
-	"farmcrowdy/helper"
-	"farmcrowdy/user"
+	"farmcrowdy_new/campaign"
+	"farmcrowdy_new/helper"
+	"farmcrowdy_new/user"
 	"fmt"
 	"net/http"
 	"strconv"

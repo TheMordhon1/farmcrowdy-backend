@@ -61,6 +61,7 @@ func (s *service) CreateCampaign(input CreateCampaignInput) (Campaign, error) {
 	campaign.DescriptionKelompokTani = input.DescriptionKelompokTani
 	campaign.Perks = input.Perks
 	campaign.GoalAmount = input.GoalAmount
+	campaign.MinPembayaran = input.MinPembayaran
 	campaign.UserID = input.User.ID
 
 	slugCandidate := fmt.Sprintf("%s %d", input.Name, input.User.ID)
@@ -88,6 +89,7 @@ func (s *service) UpdateCampaign(inputID GetCampaignDetailInput, inputData Creat
 	campaign.ShortDescription = inputData.ShortDescription
 	campaign.Perks = inputData.Perks
 	campaign.GoalAmount = inputData.GoalAmount
+	campaign.MinPembayaran = inputData.MinPembayaran
 	campaign.DescriptionKomoditas = inputData.DescriptionKomoditas
 	campaign.DescriptionProspek = inputData.DescriptionProspek
 	campaign.DescriptionRisiko = inputData.DescriptionRisiko

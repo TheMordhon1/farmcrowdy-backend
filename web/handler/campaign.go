@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"farmcrowdy/campaign"
-	"farmcrowdy/user"
+	"farmcrowdy_new/campaign"
+	"farmcrowdy_new/user"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -74,6 +74,7 @@ func (h *campaignHandler) Create(c *gin.Context) {
 	createCampaignInput.DescriptionRisiko = input.DescriptionRisiko
 	createCampaignInput.DescriptionKelompokTani = input.DescriptionKelompokTani
 	createCampaignInput.GoalAmount = input.GoalAmount
+	createCampaignInput.MinPembayaran = input.MinPembayaran
 	createCampaignInput.Perks = input.Perks
 	createCampaignInput.User = user
 
@@ -159,6 +160,7 @@ func (h *campaignHandler) Edit(c *gin.Context) {
 	input.DescriptionRisiko = existingCampaign.DescriptionRisiko
 	input.DescriptionKelompokTani = existingCampaign.DescriptionKelompokTani
 	input.GoalAmount = existingCampaign.GoalAmount
+	input.MinPembayaran = existingCampaign.MinPembayaran
 	input.Perks = existingCampaign.Perks
 
 	c.HTML(http.StatusOK, "projek_edit.html", input)
@@ -200,6 +202,7 @@ func (h *campaignHandler) Update(c *gin.Context) {
 	updateInput.DescriptionRisiko = input.DescriptionRisiko
 	updateInput.DescriptionKelompokTani = input.DescriptionKelompokTani
 	updateInput.GoalAmount = input.GoalAmount
+	updateInput.MinPembayaran = input.MinPembayaran
 	updateInput.Perks = input.Perks
 	updateInput.User = userCampaign
 
