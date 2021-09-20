@@ -68,6 +68,7 @@ func (h *campaignHandler) Create(c *gin.Context) {
 
 	createCampaignInput := campaign.CreateCampaignInput{}
 	createCampaignInput.Name = input.Name
+	createCampaignInput.Address = input.Address
 	createCampaignInput.ShortDescription = input.ShortDescription
 	createCampaignInput.DescriptionKomoditas = input.DescriptionKomoditas
 	createCampaignInput.DescriptionProspek = input.DescriptionProspek
@@ -154,6 +155,7 @@ func (h *campaignHandler) Edit(c *gin.Context) {
 	input := campaign.FormUpdateCampaignInput{}
 	input.ID = existingCampaign.ID
 	input.Name = existingCampaign.Name
+	input.Address = existingCampaign.Address
 	input.ShortDescription = existingCampaign.ShortDescription
 	input.DescriptionKomoditas = existingCampaign.DescriptionKomoditas
 	input.DescriptionProspek = existingCampaign.DescriptionProspek
@@ -196,6 +198,7 @@ func (h *campaignHandler) Update(c *gin.Context) {
 
 	updateInput := campaign.CreateCampaignInput{}
 	updateInput.Name = input.Name
+	updateInput.Address = input.Address
 	updateInput.ShortDescription = input.ShortDescription
 	updateInput.DescriptionKomoditas = input.DescriptionKomoditas
 	updateInput.DescriptionProspek = input.DescriptionProspek

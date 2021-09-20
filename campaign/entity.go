@@ -11,6 +11,7 @@ type Campaign struct {
 	ID                      int
 	UserID                  int
 	Name                    string
+	Address                 string
 	ShortDescription        string
 	DescriptionKomoditas    string
 	DescriptionProspek      string
@@ -19,7 +20,7 @@ type Campaign struct {
 	Perks                   string
 	BackerCount             int
 	GoalAmount              int
-	MinPembayaran              int
+	MinPembayaran           int
 	CurrentAmount           int
 	Slug                    string
 	CreatedAt               time.Time

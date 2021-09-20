@@ -21,6 +21,11 @@
             </div>
 
             <div class="form-group">
+                <label for="address">Alamat</label>
+                <input type="text" name="address" disabled class="form-control" value="{{ .Address }}">
+            </div>
+
+            <div class="form-group">
                 <label for="short_description">Deskripsi Singkat</label>
                 <input type="text" name="short_description" placeholder="Enter short description" disabled class="form-control" value="{{ .ShortDescription }}">
             </div>

@@ -54,6 +54,7 @@ func (s *service) GetCampaignByID(input GetCampaignDetailInput) (Campaign, error
 func (s *service) CreateCampaign(input CreateCampaignInput) (Campaign, error) {
 	campaign := Campaign{}
 	campaign.Name = input.Name
+	campaign.Address = input.Address
 	campaign.ShortDescription = input.ShortDescription
 	campaign.DescriptionKomoditas = input.DescriptionKomoditas
 	campaign.DescriptionProspek = input.DescriptionProspek
@@ -86,6 +87,7 @@ func (s *service) UpdateCampaign(inputID GetCampaignDetailInput, inputData Creat
 	}
 
 	campaign.Name = inputData.Name
+	campaign.Address = inputData.Address
 	campaign.ShortDescription = inputData.ShortDescription
 	campaign.Perks = inputData.Perks
 	campaign.GoalAmount = inputData.GoalAmount

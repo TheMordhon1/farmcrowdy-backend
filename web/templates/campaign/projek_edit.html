@@ -17,6 +17,11 @@
             </div>
 
             <div class="form-group">
+                <label for="address">Alamat</label>
+                <input type="text" name="address" placeholder="Nama Kabupaten/Kota, Nama Provinsi" required class="form-control" value="{{ .Address }}">
+            </div>
+
+            <div class="form-group">
                 <label for="short_description">Deskripsi Singkat</label>
                 <input type="text" name="short_description" placeholder="Deskripsi Singkat" required class="form-control" value="{{ .ShortDescription }}">
             </div>
